@@ -1,13 +1,15 @@
 "use client";
 
-import ShowApi from "./ShowApi/ShowApi"
+import ShowApi from "./ShowApi/ShowApi";
+import Marquee from "./Marquee/Marquee"
 
 const Home_Main = ()=>{
     return(
-        <div className="py-[80px] px-5">
-            <div className="max-w-7xl mx-auto w-full px-5 ">
-                Home Page
+        <div className="">
+            <div className=" ">
+                <Marquee></Marquee>
                 <ShowApi></ShowApi>
+                
             </div>
         </div>
     )

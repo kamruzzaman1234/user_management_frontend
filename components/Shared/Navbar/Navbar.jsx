@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
+
 const Navbar = ()=>{
     return(
         <div className="">
-            <div className="max-w-7xl mx-auto w-full py-5 px-5">
-                <div className="navbar bg-slate-100 ">
+            <div className="max-w-7xl mx-auto w-full px-5">
+                <div className="navbar bg-[#00264d] ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -13,25 +15,31 @@ const Navbar = ()=>{
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-       
-        <li><a>About</a></li>
-         <li><a>About</a></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Home</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">World</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Local</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Business</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Sports</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Agriculture</Link></li>
       </ul>
     </div>
-    <a className="text-xl">Management</a>
+    <a className="text-xl text-white font-bold text-white uppercase">New Paper</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     <li><a>Home</a></li>
-    <li><a>About</a></li>
-     <li><a>About</a></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Home</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">World</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Local</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Business</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Sports</Link></li>
+         <li><Link href={'/'} className="uppercase text-white font-bold text-sm">Agriculture</Link></li>
+        
     </ul>
   </div>
   <div className="navbar-end">
     <a className="btn">Login</a>
   </div>
-</div>
+               </div>
             </div>  
         </div>
     )
