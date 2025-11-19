@@ -1,7 +1,8 @@
 "use client";
 
 import ShowApi from "./ShowApi/ShowApi";
-import Marquee from "./Marquee/Marquee"
+import Marquee from "./Marquee/Marquee";
+import NewsAdd from "./NewsAdd/NewsAdd"
 
 const Home_Main = ()=>{
     return(
@@ -9,6 +10,7 @@ const Home_Main = ()=>{
             <div className=" ">
                 <Marquee></Marquee>
                 <ShowApi></ShowApi>
+                <NewsAdd></NewsAdd>
                 
             </div>
         </div>
