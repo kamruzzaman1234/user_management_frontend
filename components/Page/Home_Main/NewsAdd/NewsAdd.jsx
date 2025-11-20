@@ -10,6 +10,25 @@ const NewsAdd = ()=>{
         .then(res=> res.json())
         .then(data=> setNews(data))
     },[])
+
+    const handleDelete = (_id)=>{
+ 
+        console.log("delete koro", _id)
+        fetch(`http://localhost:6001/newsAdd/${_id}`, {
+            method:"DELETE",
+            headers: {'content-type':"application/json"},
+            body: JSON.stringify()
+        })
+        .then(res=> res.json())
+        .then(data=> {
+            console.log(data)
+            if(data.deletedCount > 0){
+                alert('delete successfully')
+            }
+        })
+    }
+
+
     return(
         <div className="py-8 ">
             <div className="max-w-7xl w-full mx-auto px-5">
@@ -23,7 +42,12 @@ const NewsAdd = ()=>{
                                 </div>
                                 <h2 className="font-bold text-black uppercase ">{n.title}</h2>
                                 <p className="font-sm text-slate-600">{n.description}</p>
+                                <div>
+                                    <button onClick={()=> handleDelete(n._id)}
+                                    className="btn bg-red-400 text-white">Delete</button>
+                                </div>
                             </div>
+                            
                           )
                         })
                     }
